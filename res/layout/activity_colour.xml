@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ColourActivity" >
+    
+    <ViewFlipper
+        android:id="@+id/screen_select"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inAnimation="@android:anim/slide_in_left"
+		android:outAnimation="@android:anim/slide_out_right"
+		android:background="@color/bg1">
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/hexcolour"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_above="@+id/red"
+                android:gravity="center"
+                android:text="@string/hexcolour"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white" />
+            
+		    <TextView
+		        android:id="@+id/red"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/green"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="15dp"
+		        android:text="@string/red"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/white" />
+		
+		    <TextView
+		        android:id="@+id/redval"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/green"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginRight="15dp"
+		        android:text="@string/redval"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/red" />
+		
+		    <TextView
+		        android:id="@+id/green"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_above="@+id/blue"
+		        android:text="@string/green"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/white" />
+		
+		    <TextView
+		        android:id="@+id/greenval"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/blue"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginRight="15dp"
+		        android:text="@string/greenval"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/green" />
+		
+		    <TextView
+		        android:id="@+id/blue"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/r_bar"
+		        android:text="@string/blue"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="15dp"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/white" />
+		
+		    <TextView
+		        android:id="@+id/blueval"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/r_bar"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginRight="15dp"
+		        android:text="@string/blueval"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/blue" />
+		
+		    <SeekBar
+		        android:id="@+id/b_bar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginBottom="20dp"
+		        android:max="255"
+		        android:progress="@integer/defaultProgress" />
+		
+		    <SeekBar
+		        android:id="@+id/g_bar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/b_bar"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginBottom="10dp"
+		        android:max="255"
+		        android:progress="@integer/defaultProgress" />
+		
+		    <SeekBar
+		        android:id="@+id/r_bar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_above="@+id/g_bar"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginBottom="10dp"
+		        android:max="255"
+		        android:progress="@integer/defaultProgress" />
+			        
+	        <View
+		        android:id="@+id/picker"
+		        android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_above="@+id/hexcolour"
+				android:layout_marginBottom="10dp"
+				android:background="@color/picker_color" />
+
+		    <Button
+		        android:id="@+id/switchButton1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBottom="@+id/picker"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentTop="true"
+		        android:background="#00000000"/>
+	    
+	    </RelativeLayout>
+	    
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/black">
+		    
+            <ImageView
+                android:id="@+id/spectrum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/spectrum"
+                android:scaleType="fitCenter"/>
+            
+            <Button 
+                android:id="@+id/specButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="50dp"
+                android:background="#00000000"/>
+            
+            <View
+                android:id="@+id/picker2"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/picker_color"/>
+            
+            <TextView
+                android:id="@+id/spectrum_back"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/spectrum_back"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/white" />
+                
+            <Button
+		        android:id="@+id/switchButton2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="50dp"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:background="#00000000"/>
+                
+            
+        </RelativeLayout>
+
+    </ViewFlipper>
+</RelativeLayout>

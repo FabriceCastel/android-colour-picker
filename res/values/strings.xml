@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColourWise</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="question">How much wood would a wood chuck chuck?</string>
+    <string name="answer1">None</string>
+    <string name="answer2">A lot</string>
+    <string name="red">Red: </string>
+    <string name="green">Green: </string>
+    <string name="blue">Blue: </string>
+    <string name="redval">255</string>
+    <string name="greenval">255</string>
+    <string name="blueval">255</string>
+    <string name="button1text">Spectrum</string>
+    <string name="spectrum_back">Exit Spectrum</string>
+    <string name="hexcolour">#FFFFFF</string>
+</resources>
